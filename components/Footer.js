@@ -12,7 +12,7 @@ function Footer() {
 				width={20}
 			/>
 			<Link href="https://github.com/peter-geek/exam-platform">
-				<p className="text-[#2467a7]">@ exam-platform</p>
+				<a className="text-[#2467a7]">@ exam-platform</a>
 			</Link>
 		</div>
 	);
