@@ -11,7 +11,7 @@ function Signup() {
 				<title>Online exam platform</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<main className="flex flex-1 flex-col">
+			<main className="flex flex-grow flex-col">
 				<Header pathname={rt.pathname} />
 				<div className="items-center justify-center flex flex-col py-16">
 					<form className="min-w-[290px] lg:min-w-[350px]">

@@ -2,21 +2,19 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Footer from "../components/Footer";
 
 function Signin() {
 	const rt = useRouter();
-	// const { aspath, pathname } = useRouter;
-	// console.log(pathname + ", ", +aspath, +", " + rt.pathname);
-	// console.log(Router);
 	return (
-		<div className="">
+		<div className="flex flex-col min-h-screen">
 			<Head>
 				<title>Online exam platform</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<main className="flex flex-1 flex-col">
+			<main className="flex-1">
 				<Header pathname={rt.pathname} />
-				<div className="items-center justify-center flex flex-col py-16">
+				<div className="items-center justify-center flex flex-col sm:py-16 py-14 h-full">
 					<form className="min-w-[290px] lg:min-w-[350px]">
 						<h1 className="text-xl text-gray-500 text-center pb-6 font-bold">
 							Account signin
@@ -44,6 +42,8 @@ function Signin() {
 					</form>
 				</div>
 			</main>
+
+			<Footer />
 		</div>
 	);
 }
