@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+	.signin_input {
+		@apply py-1 px-2 w-full rounded-md outline-none border-[#88829c] border-[1px] text-sm mb-3 shadow-inner hover:shadow-md transform duration-200 ease-out focus:scale-105;
+	}
+}
