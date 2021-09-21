@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import CustomPrompt from "./CustomPrompt";
 
 function Footer() {
 	return (
@@ -14,6 +15,7 @@ function Footer() {
 			<Link href="https://github.com/peter-geek/exam-platform">
 				<a className="text-[#2467a7]">@ exam-platform</a>
 			</Link>
+			<CustomPrompt />
 		</div>
 	);
 }

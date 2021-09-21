@@ -15,6 +15,7 @@ Router.events.on("routeChangeStart", progress.start);
 Router.events.on("routeChangeComplete", progress.finish);
 Router.events.on("routeChangeError", progress.finish);
 
+// console.log(process.env.HOST_URL);
 function MyApp({ Component, pageProps }) {
 	return <Component {...pageProps} />;
 }
