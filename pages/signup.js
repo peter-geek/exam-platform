@@ -35,9 +35,13 @@ function Signup() {
 		fetch(`${url}`, options)
 			.then((response) => response.json())
 			.then((data) => {
-				console.log(data);
-				if (data.hasOwnProperty("error") && data.error != "") {
-					showDialogue(data.error);
+				if (data.msg != "ok") {
+					showDialogue(data.msg);
+				} else {
+					showDialogue(
+						"Your account has been created. Please login ..."
+					);
+					window.setTimeout(() => rt.push("/signin"), 3000);
 				}
 			})
 			.catch((error) => {
