@@ -5,10 +5,14 @@ import CustomPrompt from "../components/CustomPrompt";
 import { showDialogue, closeDialogue } from "../functions/dialogue";
 import { UserIcon, UserCircleIcon, LogoutIcon } from "@heroicons/react/solid";
 import Lorem from "../components/Lorem";
+import Head from "next/head";
 // import "localstorage-polyfill";
 function dashboard() {
 	return (
 		<div className="flex h-screen bg-[#f5f5f5] text-gray-600">
+			<Head>
+				<title>Dashboard</title>
+			</Head>
 			<div className="flex-shrink-0 w-[240px] text-gray-600 min-h-full bg-white shadow-lg">
 				<p className="">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -47,26 +51,26 @@ function dashboard() {
 							</div>
 						</div>
 					</div>
-					<div className="flex-grow flex pt-2 break-all whitespace-pre-wrap overflow-y-scroll">
-						{/* <div className="flex-grow">
-							<div className="bg-white rounded-md ml-2 overflow-hidden">
+					<div className="flex-grow flex p-2 break-all whitespace-pre-wrap overflow-y-scroll">
+						<div className="flex-grow">
+							<div className="bg-white rounded-md overflow-hidden">
 								<p className="border-b border-gray-200 p-2 font-semibold bg-gradient-to-t from-[#f5f5f5] to-white">
 									Performance
 								</p>
 								lll
 							</div>
+							<Lorem />
+							<Lorem />
+							<Lorem />
 						</div>
-						<div className="flex-grow-0 w-[350px]">
+						<div className="flex-grow-0 w-[350px] flex-shrink-0">
 							<div className="bg-white rounded-lg ml-2 mr-2 p-2">
 								Card
 							</div>
-						</div> */}
-						<Lorem />
-						<Lorem />
+						</div>
 					</div>
 				</div>
 			</div>
-			<CustomPrompt />
 		</div>
 	);
 }

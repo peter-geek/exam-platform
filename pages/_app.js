@@ -1,23 +1,24 @@
 import "tailwindcss/tailwind.css";
 import "../styles/global.css";
-import ProgressBar from "@badrap/bar-of-progress";
+import { showDialogue } from "../functions/dialogue";
 
 import Router from "next/router";
+import CustomPrompt from "../components/CustomPrompt";
+import CustomPreloader from "../components/CustomPreloader";
+import { showpreloader } from "../functions/CustomPreloader";
 
-const progress = new ProgressBar({
-	size: 4,
-	className: "z-50",
-	color: "#4e3894",
-	delay: 100,
-});
-
-Router.events.on("routeChangeStart", progress.start);
-Router.events.on("routeChangeComplete", progress.finish);
-Router.events.on("routeChangeError", progress.finish);
+Router.events.on("routeChangeStart", showpreloader);
+Router.events.on("routeChangeComplete", showpreloader);
+Router.events.on("routeChangeError", showpreloader);
 
 // console.log(process.env.HOST_URL);
 function MyApp({ Component, pageProps }) {
-	return <Component {...pageProps} />;
+	return (
+		<Component {...pageProps}>
+			<CustomPrompt />
+			<CustomPreloader />
+		</Component>
+	);
 }
 
 export default MyApp;
